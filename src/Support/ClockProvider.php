@@ -7,11 +7,10 @@ use DateTime;
 class ClockProvider
 {
     /**
-     * EPOCH - we don't want or need to cover the entire span
-     * of time since any real epoch, so this is the base time
-     * stamp we'll support from.
+     * EPOCH was 1293840000 in the forked library
+     * changed to 0 to make it compatible with Python library version 1.0
      */
-    public static $EPOCH = 1293840000;
+    public static $EPOCH = 0;
     protected static $now = null;
 
     public static function getDateTime()
